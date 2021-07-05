@@ -19,8 +19,8 @@ def init_driver(headless = False):                                          #α�
     Αυτή η συνάρτηση
     αρχικοποιεί τον driver.
     """
-    args = headless_driver() if headless == True else None                  #ternary-like operator
-    return Edge(executable_path="driver\msedgedriver.exe",options=args)
+    option = headless_driver() if headless == True else None                  #ternary-like operator
+    return Edge(executable_path="driver\msedgedriver.exe",options=option)
 
 def login(driver, usernameText, passwordText):
     """
